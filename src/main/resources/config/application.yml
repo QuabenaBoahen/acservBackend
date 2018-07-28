@@ -1,0 +1,19 @@
+
+spring:
+  jpa:
+    properties:
+     hibernate:
+      dialet: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+     ddl-auto: update
+     naming:
+      strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    show-sql: true
+       
+  datasource: 
+    type: com.zaxxer.hikari.HikariDataSource   
+    driver-class-name: com.mysql.jdbc.Driver
+    #url: jdbc:mysql://localhost:3306/acserv_db?autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://us-cdbr-gcp-east-01.cleardb.net/gcp_6fe0688acf9874963543?autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: b5b963d83d1516
+    password: 2e9f5205

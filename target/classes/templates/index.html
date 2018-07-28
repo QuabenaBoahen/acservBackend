@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/swanky-purse/jquery-ui.css">
+    <link rel="stylesheet" th:href="@{/app.css}" />
+
+    <title>AcServe | GPS Coordinates Tracker</title>
+</head>
+<body>
+    
+    <div class="search-bar container">
+        <div class="row">
+            <div class="col-sm">
+            <br/>
+                    <div class="input-field">
+                        <h3>GPS Coordinates</h3>
+                    </div>
+            </div>
+        </div>
+    </div><br/>
+    <div class="container">
+        <div class="col-sm">
+								<table class="table table-bordered table-striped">
+									<thead>
+									<tr>
+										    <th>Id</th>
+											<th>Latitude</th>
+											<th>Longitude</th>
+											<th>Date</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="c : ${gpsCoordinates}">
+										<td th:text="${c.id}">Id</td>
+											<td th:text="${c.latitude}">Latitude</td>
+											<td th:text="${c.longitude}">Longitude</td>
+											<td th:text="${c.date}">date</td>
+										</tr> 
+									</tbody>
+								</table>
+        </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+</body>
+</html>
